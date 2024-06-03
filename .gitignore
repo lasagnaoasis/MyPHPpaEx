@@ -21,3 +21,4 @@ ticker/ticker.o
 ticker/update.o
 scripts/*.cfg
 scripts/*.cfg.life
+.vs/

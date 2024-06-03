@@ -60,9 +60,9 @@ if (ISSET($extra_header)) {
   my_header("",0);
 }
 
-mysqli_query($db, "UPDATE user set last=NOW(),last_tick='$mytick'".
-	     "ip='$_SERVER[REMOTE_ADDR]' ".
-	     "WHERE planet_id='$Planetid'"); 
+$remoteAddr = get_ip();
+
+mysqli_query($db, "UPDATE user set last=NOW(), last_tick='$mytick', ip='$remoteAddr' WHERE planet_id='$Planetid'"); 
 
 if ($Planetid==1) {
   ?>
